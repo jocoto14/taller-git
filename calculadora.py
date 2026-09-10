@@ -19,8 +19,9 @@ def multiplicar(a, b):
 
 
 def dividir(a, b):
-    # TODO: implementar la división (recordar validar división entre cero)
-    raise NotImplementedError("Falta implementar la división")
+    if b == 0:
+        raise ZeroDivisionError("No se puede dividir entre cero.")
+    return a / b
 
 
 def pedir_numero(mensaje):
