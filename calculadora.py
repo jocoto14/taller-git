@@ -11,8 +11,7 @@ def sumar(a, b):
 
 
 def restar(a, b):
-    # TODO: implementar la resta
-    raise NotImplementedError("Falta implementar la resta")
+    return a - b
 
 
 def multiplicar(a, b):
