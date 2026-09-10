@@ -15,8 +15,7 @@ def restar(a, b):
 
 
 def multiplicar(a, b):
-    # TODO: implementar la multiplicación
-    raise NotImplementedError("Falta implementar la multiplicación")
+    return a * b
 
 
 def dividir(a, b):
