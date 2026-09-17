@@ -1,4 +1,7 @@
-"""Calculadora de consola, a propósito incompleta.
+"""
+@author Johnny Coto
+
+Calculadora de consola, a propósito incompleta.
 
 Sirve como proyecto de utilería para el taller de Git de la clase 3: la suma
 ya funciona, el resto de operaciones se completa en vivo durante la demo
