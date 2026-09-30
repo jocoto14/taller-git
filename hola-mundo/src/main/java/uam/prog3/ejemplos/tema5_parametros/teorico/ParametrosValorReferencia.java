@@ -16,6 +16,7 @@ public class ParametrosValorReferencia {
         System.out.println("Edad tras intentarDuplicar: " + edad);
 
         Mascota firulais = new Mascota("Firulais", 5);
+        System.out.println(firulais.getEdad());
         festejarCumpleanos(firulais);
         System.out.println(firulais.getNombre() + " ahora tiene " + firulais.getEdad() + " años");
 

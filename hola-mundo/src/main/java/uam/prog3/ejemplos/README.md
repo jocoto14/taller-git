@@ -2,11 +2,13 @@
 
 Cada tema tiene dos ejemplos independientes, cada uno con su propio `main`:
 un **ejemplo teórico** (la analogía clásica de libro) y un **ejemplo práctico**
-(una situación que se enfrenta programando de verdad).
+(una situación que se enfrenta programando de verdad). La excepción es el tema 8
+(Visibilidad), que solo tiene ejemplo teórico porque su caso práctico es el mismo
+del tema 1.
 
 | Tema | Versión | Clase para ejecutar | Idea central |
 |---|---|---|---|
-| **Encapsulamiento** | Teórico | `tema1_encapsulamiento.teorico.CuentaBancaria` | El `saldo` es `private`; solo se puede cambiar a través de `depositar()`/`retirar()`, que validan antes de tocar el estado. Nadie puede dejarlo negativo asignándolo directo. |
+| **Encapsulamiento** | Teórico | `tema1_encapsulamiento.teorico.EjemploTeorico` | El `saldo` de `CuentaBancaria` es `private`; solo se puede cambiar a través de `depositar()`/`retirar()`, que validan antes de tocar el estado. Desde otra clase nadie puede dejarlo negativo asignándolo directo (`cuenta.saldo = -5000` no compila). |
 | **Encapsulamiento** | Práctico | `tema1_encapsulamiento.practico.Termostato` | `setTemperatura()` nunca deja que el valor interno salga de un rango válido, aunque quien llame le pase un número fuera de rango (ej. un sensor con ruido, o un usuario mal intencionado). |
 | **Abstracción** | Teórico | `tema2_abstraccion.teorico.EjemploTeorico` | `Figura` es abstracta y declara `calcularArea()` sin decir cómo; `Circulo` y `Rectangulo` implementan el cómo. El código que llama a `describir()` no necesita saber la fórmula de cada figura. |
 | **Abstracción** | Práctico | `tema2_abstraccion.practico.EjemploPractico` | `MetodoPago` expone solo `pagar()`; el código que cobra no sabe (ni le importa) si por dentro se verifica una tarjeta o se redirige a PayPal. Eso es esconder el detalle de implementación. |
@@ -20,6 +22,7 @@ un **ejemplo teórico** (la analogía clásica de libro) y un **ejemplo práctic
 | **Sobrecarga (overloading)** | Práctico | `tema6_sobrecarga.practico.ImpresoraDeRecibos` | `imprimir()` tiene tres formas (encabezado, línea de producto con precio, lista de líneas) porque un recibo real necesita formatear distintos tipos de contenido sin inventar tres nombres distintos. |
 | **Sobreescritura (overriding)** | Teórico | `tema7_sobreescritura.teorico.EjemploTeorico` | `Perro` y `Gato` redefinen `hacerSonido()` de `Animal` con `@Override`. Aunque las variables son de tipo `Animal`, Java ejecuta la versión de la subclase real. |
 | **Sobreescritura (overriding)** | Práctico | `tema7_sobreescritura.practico.EjemploPractico` | `Guerrero` y `Mago` redefinen `atacar()` de `PersonajeJuego`, cada uno con su propia lógica de combate. El motor del juego solo conoce `PersonajeJuego`, nunca pregunta el tipo concreto. |
+| **Visibilidad** | Teórico | `tema8_visibilidad.teorico.Visibilidad`, `MismoPaquete`, `otropaquete.Subclase` y `otropaquete.ClaseExterna` | Los cuatro niveles (`private`, paquete, `protected`, `public`) en atributos y métodos, vistos desde la misma clase, el mismo paquete, una subclase de otro paquete y una clase externa. `private` es por **clase**, no por objeto: por eso un `main` dentro de `CuentaBancaria` sí puede hacer `cuenta.saldo = -5000`. |
 
 ## Cómo ejecutar un ejemplo
 

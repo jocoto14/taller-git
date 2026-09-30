@@ -8,6 +8,9 @@ public class EjemploTeorico {
         circulo.describir();
         rectangulo.describir();
 
+        double areaCirculo = circulo.calcularArea();
+        double areaRectangulo = rectangulo.calcularArea();
+
         // new Figura("verde"); // no compila: una clase abstracta no se puede instanciar
     }
 }
